@@ -1,0 +1,25 @@
+<h1>{{message}}</h1>
+
+<h1>Welcome to BridgeLabz, {{ userName || 'Guest' }}!</h1>
+
+<input [(ngModel)]="userName" (ngModelChange)="validateUserName()" placeholder="Enter your name" />
+
+<div *ngIf="errorMessage" style="color: red; font-size: 14px;">
+  {{ errorMessage }}
+</div>
+
+<div class="LOGO">
+  <h1>Welcome to BRIDGELABZ</h1>
+
+  <img [src]="'assets/bridgelabz_com_logo.jpg'" (click)="onClick($event)" />
+</div>
+
+<!-- <div class="LOGO">
+  <img [src]="'assets/bridgelabz_com_logo.jpg'"
+  alt="The BridgeLabz logo: a Bridge to employment through Lab works." (click)="onClick($event)"
+  width="200" />
+  <h1>{{title}}</h1>
+</div>
+
+<router-outlet></router-outlet> -->
+ 
